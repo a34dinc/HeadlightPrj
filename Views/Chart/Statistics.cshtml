@@ -1,0 +1,193 @@
+﻿@{
+    ViewData["Title"] = "Statistics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Custom Theme files -->
+    <link href="~/web2/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <script src="~/web2/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/web2/css/font-awesome.css">
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Metro Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--webfont-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <link href="~/web2/css/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+    <script src="~/web2/js/easyResponsiveTabs.js" type="text/javascript"></script>
+
+    <script src="~/web2/js/main.js"></script> <!-- Resource jQuery -->
+    <!-- chart -->
+    <script src="~/web2/js/Chart1.js"></script>
+    <!-- //chart -->
+</head>
+<body>
+    <div class="total-content">
+        <div class="list_of_members">
+            <div class="sales" style="background-color:#1abc9c">
+                <div class="icon-text">
+                    <h3>@ViewBag.v1</h3>
+                    <p>Toplam Ürün Sayısı</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="new-users" style="background-color:#ffb8b8">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.v2</h3>
+                    <p>Toplam Kategori Sayısı</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="orders" style="background-color:#c56cf0">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.v3</h3>
+                    <p>Toplam Far Çeşidi</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="visitors" style="background-color:olivedrab">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.v4</h3>
+                    <p>Toplam Far Camı Çeşidi</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="total-content">
+        <div class="list_of_members">
+            <div class="sales" style="background-color:#ff3838">
+                <div class="icon-text">
+                    <h3>@ViewBag.v5</h3>
+                    <p>Toplam 
+                        Far Camı Çeşidi</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="new-users" style="background-color:#ff9f1a">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.v6</h3>
+                    <p>Far Ürünlerinin Toplam Stok Durumu</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="orders" style="background-color:#18dcff">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.v7</h3>
+                    <p>Far Camı Ürünlerinin Toplam Stok Durumu</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="visitors" style="background-color:#7d5fff">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.v8</h3>
+                    <p>Far Beyni Ürünlerinin Toplam Stok Durumu</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="total-content">
+        <div class="list_of_members">
+            <div class="sales" style="background-color:#3ae374">
+                <div class="icon-text">
+                    <h3>@ViewBag.v9</h3>
+                    <p>En Çok Stoğa Sahip Ürün</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="new-users" style="background-color:#67e6dc">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.v10</h3>
+                    <p>En Az Stoğa Sahip Ürün</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="orders" style="background-color:#d1d8e0">
+
+                <div class="icon-text">
+                    <h3> @ViewBag.v11 ₺</h3>
+                    <p>Far Ortalama Ücreti</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="visitors" style="background-color:#a5b1c2">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.v12 ₺</h3>
+                    <p>Far Camı Ort. Ücreti</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="total-content">
+        <div class="list_of_members">
+            <div class="sales" style="background-color:#e84118">
+                <div class="icon-text">
+                    <h3>@ViewBag.v13 ₺</h3>
+                    <p>Far Beyni Ort. Ücreti</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="new-users" style="background-color:#7f8fa6">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.v14 ₺</h3>
+                    <p>En Pahalı Far</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="orders" style="background-color:#273c75">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.v15 ₺</h3>
+                    <p>En Pahalı Far Camı</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="visitors" style="background-color:#40739e">
+
+                <div class="icon-text">
+                    <h3>@ViewBag.v16 ₺</h3>
+                    <p>En Pahalı Far Beyni</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</body>
+</html>

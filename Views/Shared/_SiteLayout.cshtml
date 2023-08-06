@@ -1,0 +1,80 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Kartal Far</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="~/web3/assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="~/web3/css/styles.css" rel="stylesheet" />
+    <link href="~/web3/css/stylesheet1.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" style="font-family: 'Tektur', cursive;" href="#!">Kartal Far</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Hakkımızda</a></li>
+                    @await Component.InvokeAsync("CategoryGetList")
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-dark py-1">
+        <div class="absolute">
+            <img style="float: left;" src="~/web3/kartal far logo.svg" alt="logo" width="200px;" />
+        </div>
+        <div class="container px-4 px-lg-4 my-4">
+            <div class="text-center text-warning">
+                <h1 class="display-6" style="font-family: 'Tektur', cursive;">
+                    KARTAL FAR - FURKAN ÇETİN
+                </h1>
+            </div>
+            <div class="text-center text-warning">
+                <span id="boot-icon" class="bi bi-whatsapp" style="font-size: 1.2rem; color: rgb(0, 128, 55); margin:5px"><a href="https://api.whatsapp.com/send?phone=05300993718&text=Hello this is the starting message">Web Whatsapp Hattı</a></span>
+
+                <h1 class="display-7 fw-semibold">TELEFON : 0530 099 37 18</h1>
+            </div>
+            <div class="text-center text-warning">
+                <h1 class="display-8 fst-italic fw-bold" style="font-family: 'Tektur', cursive;">ADRES : Esentepe, Oruçbey Sk. No:5, 34870   Kartal / İstanbul</h1>
+            </div>
+
+        </div>
+
+    </header>
+    <!-- Section-->
+    <section class="py-5">
+        <div class="container px-0 px-lg-6 mt-6">
+            <div class="row gx-1 gx-lg-3 row-cols-3 row-cols-md-3 row-cols-xl-3 justify-content-center">
+                @await Component.InvokeAsync("HeadLightGetList")
+                @RenderBody()
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="~/web3/js/scripts.js"></script>
+</body>
+</html>
+

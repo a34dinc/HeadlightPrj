@@ -1,0 +1,22 @@
+﻿@model HeadlightPrj.Data.Models.Category
+@{
+    ViewData["Title"] = "CategoryGet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>CategoryGet</h1>
+@using (Html.BeginForm("CategoryUpdate", "Category", FormMethod.Post))
+{
+    @Html.LabelFor(x=>x.CategoryId)
+    @Html.TextAreaFor(x=>x.CategoryId, new{rows="1", @class = "form-control"})
+    <br />
+    @Html.LabelFor(x=>x.CategoryName)
+    @Html.TextAreaFor(x=>x.CategoryName, new{rows="1", @class = "form-control"})
+    @Html.ValidationMessageFor(x=>x.CategoryName,"",new {@style="color:red"})
+    <br />
+    @Html.LabelFor(x=>x.CategoryDescription)
+    @Html.TextAreaFor(x=>x.CategoryDescription, new{rows="1", @class = "form-control"})
+    <br />
+    <button class="btn btn-info">Update</button>
+}
+

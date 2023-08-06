@@ -1,0 +1,27 @@
+﻿
+@model IEnumerable<HeadlightPrj.Data.Models.HeadLight>
+
+@foreach(var item in Model)
+{
+    <div class="col mb-4">
+        <div class="card h-100">
+            <!-- Product image-->
+            <img class="card-img-top" src="@item.ImageURL" alt="..." />
+            <!-- Product details-->
+            <div class="card-body p-1">
+                <div class="text-center">
+                    <!-- Product name-->
+                    <h6 class="fw-semibold">@item.Name</h6>
+                    <!-- Product price-->
+                    <h6 class="fw-normal">Fiyat: @item.Price</h6>
+                    <h6 class="fw-normal">Stok: @item.Stock</h6>
+                    <h6 class="fw-normal">Model: @item.Description</h6>
+                </div>
+            </div>
+            <!-- Product actions-->
+@*            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+            </div>*@
+        </div>
+    </div>
+}

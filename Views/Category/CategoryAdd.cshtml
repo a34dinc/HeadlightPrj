@@ -1,0 +1,20 @@
+﻿@model HeadlightPrj.Data.Models.Category
+@{
+    ViewData["Title"] = "CategoryAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CategoryAdd</h2>
+<br />
+
+@using(Html.BeginForm("CategoryAdd", "Category", FormMethod.Post))
+{
+    @Html.LabelFor(x=>x.CategoryName)
+    @Html.TextAreaFor(x=>x.CategoryName, new{rows="1", @class = "form-control"})
+    @Html.ValidationMessageFor(x=>x.CategoryName,"",new {@style="color:red"})
+    <br />
+    @Html.LabelFor(x=>x.CategoryDescription)
+    @Html.TextAreaFor(x=>x.CategoryDescription, new{rows="1", @class = "form-control"})
+    <br />
+    <button class="btn btn-info">Save</button>
+}

@@ -1,0 +1,31 @@
+﻿@model HeadlightPrj.Data.Models.HeadLight
+@{
+    ViewData["Title"] = "HeadLightAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>HeadLightAdd</h2>
+
+@using (Html.BeginForm("HeadLightAdd", "HeadLight", FormMethod.Post))
+{
+    @Html.LabelFor(x=>x.Name)
+    @Html.TextAreaFor(x=>x.Name, new{rows="1", @class = "form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Description)
+    @Html.TextAreaFor(x=>x.Description, new{rows="1", @class = "form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Price)
+    @Html.TextAreaFor(x=>x.Price, new{rows="1", @class = "form-control"})
+    <br />
+    @Html.LabelFor(x=>x.ImageURL)
+    @Html.TextAreaFor(x=>x.ImageURL, new{rows="1", @class = "form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Stock)
+    @Html.TextAreaFor(x=>x.Stock, new{rows="1", @class = "form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Category)
+    @Html.DropDownListFor(x=>x.CategoryId,(List<SelectListItem>)ViewBag.v1, new {@class= "form-control"})
+    <br />
+    <button class="btn btn-info">Save</button>
+}
+
